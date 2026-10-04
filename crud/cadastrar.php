@@ -7,6 +7,7 @@ $descricao = $_POST['descricao'];
 $preco = $_POST['preco'];
 $quantidade = $_POST['quantidade'];
 $data_validade = strval($_POST['data_validade']);
+$data_atual = date('Y-m-d');
 
 include('../infra/validacao.php');
 
