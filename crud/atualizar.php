@@ -14,7 +14,7 @@ include("validacao.php");
 
 $query = "UPDATE produto SET nome = ?, categoria_id = ?, descricao = ?, preco = ?, quantidade = ?, data_validade = ? WHERE id = ?";
 $comando = mysqli_prepare($conexao, $query);
-mysqli_stmt_bind_param($comando, "sisdssi", $nome, $categoria_id, $descricao, $preco, $quantidade, $data_validade, $id);
+mysqli_stmt_bind_param($comando, "sisdisi", $nome, $categoria_id, $descricao, $preco, $quantidade, $data_validade, $id);
 mysqli_stmt_execute($comando);
 
 header("Location: ../index.php");

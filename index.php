@@ -1,4 +1,6 @@
 <?php
+
+echo "FUNCIONOU!";
 include('infra/conexao.php');
 
 $queryTabela = "SELECT p.id, p.nome, c.descricao AS categoria, p.descricao, p.preco, p.quantidade, p.data_validade
