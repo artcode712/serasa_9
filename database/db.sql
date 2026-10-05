@@ -28,4 +28,4 @@ INSERT INTO produto (categoria_id, nome, descricao, preco, quantidade, data_vali
 (1, 'Arroz', 'Arroz branco tipo 1', 20.00, 100, '2027-12-31'),
 (2, 'Refrigerante', 'Refrigerante de cola', 5.00, 200, '2027-10-15'),
 (3, 'Shampoo', 'Shampoo para cabelos normais', 12.00, 80, '2027-02-15'),
-(4, 'Chocolate', 'Chocolate ao leite', 8.00, 120, '2027-08-10'),
+(4, 'Chocolate', 'Chocolate ao leite', 8.00, 120, '2027-08-10');

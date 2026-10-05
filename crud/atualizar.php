@@ -10,9 +10,9 @@ $quantidade = $_POST["quantidade"];
 $data_validade = strval($_POST["data_validade"]);
 $data_atual = date("Y-m-d");
 
-include("../infra/validacao.php");
+include("validacao.php");
 
-$query = "UPDATE produtos SET nome = ?, categoria_id = ?, descricao = ?, preco = ?, quantidade = ?, data_validade = ? WHERE id = ?";
+$query = "UPDATE produto SET nome = ?, categoria_id = ?, descricao = ?, preco = ?, quantidade = ?, data_validade = ? WHERE id = ?";
 $comando = mysqli_prepare($conexao, $query);
 mysqli_stmt_bind_param($comando, "sisdssi", $nome, $categoria_id, $descricao, $preco, $quantidade, $data_validade, $id);
 mysqli_stmt_execute($comando);

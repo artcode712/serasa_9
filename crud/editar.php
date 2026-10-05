@@ -1,5 +1,7 @@
 <?php
 
+include("../infra/conexao.php");
+
 $id = $_GET['id'];
 
 $queryProduto = "SELECT p.id, p.nome, c.id AS categoria_id, c.descricao AS categoria, p.descricao, p.preco, p.quantidade, p.data_validade FROM produto p JOIN categoria c ON p.categoria_id = c.id WHERE p.id = $id";
@@ -24,7 +26,7 @@ $resultadoCategoria = $conexao->query($queryCategoria);
     
  <h2>Editar Produto</h2>
 
-    <form action="crud/atualizar.php" method="POST">
+    <form action="atualizar.php" method="POST">
         <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
 
         <label for="nome">Nome do Produto:</label><br>

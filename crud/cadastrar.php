@@ -9,9 +9,9 @@ $quantidade = $_POST['quantidade'];
 $data_validade = strval($_POST['data_validade']);
 $data_atual = date('Y-m-d');
 
-include('../infra/validacao.php');
+include('validacao.php');
 
-$query = "INSERT INTO produtos (nome, categoria_id, descricao, preco, quantidade, data_validade) VALUES (?, ?, ?, ?, ?, ?)";
+$query = "INSERT INTO produto (nome, categoria_id, descricao, preco, quantidade, data_validade) VALUES (?, ?, ?, ?, ?, ?)";
 
 $comando = mysqli_prepare($conexao, $query);
 mysqli_stmt_bind_param($comando, 'sisdss', $nome, $categoria, $descricao, $preco, $quantidade, $data_validade);
