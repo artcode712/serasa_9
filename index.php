@@ -2,7 +2,9 @@
 include('infra/conexao.php');
 
 $queryTabela = "SELECT p.id, p.nome, c.descricao AS categoria, p.descricao, p.preco, p.quantidade, p.data_validade
-$queryTabela .= " ORDER BY p.id";
+FROM produto p 
+JOIN categoria c ON p.categoria_id = c.id
+ORDER BY p.id";
 
 $resultadoTabela = $conexao->query($queryTabela);
 
